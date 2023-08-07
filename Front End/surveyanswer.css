@@ -1,0 +1,17 @@
+.survey-button-container {
+    display: flex;
+}
+
+.survey-submit-button {
+    margin-right: auto;
+  }
+
+  .survey-go-back-button {
+    margin-left: auto;
+  }
+
+  .survey-question-container{
+    display: flex;
+    padding-top: 5%;
+    column-width: 70px;
+  }
