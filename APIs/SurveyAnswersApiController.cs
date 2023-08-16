@@ -1,20 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.Mvc;
-using Sabio.Services.Interfaces;
-using Sabio.Services;
-using Sabio.Web.Controllers;
-using Sabio.Web.Api.Controllers.Blogs;
-using Sabio.Models.Requests.Blog;
-using Sabio.Web.Models.Responses;
-using System;
-using Sabio.Models.Requests.Surveys;
-using Sabio.Models.Domain.Blogs;
-using Sabio.Models.Domain.Surveys;
-using Microsoft.AspNetCore.Authorization;
-using Sabio.Models;
 
-namespace Sabio.Web.Api.Controllers
 {
     [Route("api/answers")]
     [ApiController]
@@ -223,7 +207,5 @@ namespace Sabio.Web.Api.Controllers
             }
             return StatusCode(code, response);
         }
-
-
     }
 }
