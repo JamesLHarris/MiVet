@@ -1,19 +1,3 @@
-﻿using System.Collections.Generic;
-using System.Data;
-using Sabio.Models.Domain.Surveys;
-using Sabio.Data;
-using System.Data.SqlClient;
-using Sabio.Models.Requests.Surveys;
-using Sabio.Data.Providers;
-using Sabio.Models;
-using Sabio.Models.Domain.SurveyQuestions;
-using Sabio.Services.Interfaces;
-using EllipticCurve;
-using Sabio.Models.Domain;
-using Sabio.Models.Domain.Users;
-
-namespace Sabio.Services
-{
 
     public class SurveyAnswersService : ISurveyAnswersService
     {
@@ -242,8 +226,6 @@ namespace Sabio.Services
 
             return answersDetailed;
         }
-
-
 
         private SurveyAnswers MapSingleSurveyAnswers(IDataReader reader, ref int startingIndex)
         {
