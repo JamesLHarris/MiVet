@@ -5,8 +5,6 @@ import toastr from "toastr";
 import "../../toastr/build/toastr.css";
 import surveyAnswersService from "services/surveyAnswersService";
 import AvailableSurvey from "./AvailableSurvey";
-import debug from "sabio-debug";
-const _logger = debug.extend("SurveyAnswers");
 
 const SurveyAnswers = ({ currentUser }) => {
   const [pageData] = useState({
@@ -19,8 +17,6 @@ const SurveyAnswers = ({ currentUser }) => {
     arrayOfSurveys: [],
     surveyComponents: [],
   });
-
-  _logger(surveys);
 
   useEffect(() => {
     surveyAnswersService
