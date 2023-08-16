@@ -1,8 +1,3 @@
-﻿using Sabio.Models;
-using Sabio.Models.Domain.Surveys;
-using Sabio.Models.Requests.Surveys;
-
-namespace Sabio.Services.Interfaces
 {
     public interface ISurveyAnswersService
     {
