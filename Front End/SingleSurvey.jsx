@@ -5,7 +5,6 @@ import surveyAnswersService from "services/surveyAnswersService";
 import Question from "./Question";
 import PropTypes from "prop-types";
 import toastr from "toastr";
-import debug from "sabio-debug";
 import { useLocation } from "react-router-dom";
 import { Form, Formik } from "formik";
 import { useMemo } from "react";
