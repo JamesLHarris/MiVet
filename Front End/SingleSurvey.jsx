@@ -11,7 +11,6 @@ import { Form, Formik } from "formik";
 import { useMemo } from "react";
 import "./surveyanswer.css";
 import { useEffect } from "react";
-const _logger3 = debug.extend("ArrayLogger");
 
 function SingleSurvey() {
   const state = useLocation();
@@ -37,16 +36,6 @@ function SingleSurvey() {
   };
 
   const createInstanceSuccess = (response) => {
-    _logger3(
-      survey,
-      "survey",
-      parentValue,
-      "answerState",
-      instanceData,
-      "intanceData",
-      response,
-      "instanceResponse"
-    );
     let getData = response.item;
     setInstanceData((prevState) => {
       const pd = { ...prevState };
