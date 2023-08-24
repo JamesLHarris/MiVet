@@ -1,5 +1,3 @@
-
-{
     public class SurveyAnswerAddRequest
     {
         [Required]
@@ -15,4 +13,3 @@
         public int? AnswerNumber { get; set; }
 #nullable disable
     }
-}
