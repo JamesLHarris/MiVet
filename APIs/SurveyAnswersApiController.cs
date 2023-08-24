@@ -1,5 +1,3 @@
-
-{
     [Route("api/answers")]
     [ApiController]
     public class SurveysAnswersApiController : BaseApiController
@@ -208,4 +206,3 @@
             return StatusCode(code, response);
         }
     }
-}
