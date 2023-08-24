@@ -23,21 +23,21 @@ SELECT su.Id
       ,u.AvatarUrl as AuthorPicture
       ,Questions = (
 			SELECT sq.[Id]
-				  ,sq.[Question]
-				  ,sq.[QuestionTypeId]
-				  ,AnswerOptions=(
+			      ,sq.[Question]
+			      ,sq.[QuestionTypeId]
+		              ,AnswerOptions=(
 			SELECT ao.[Id]
-					,ao.[QuestionId]
-					,ao.[Text]
-					FROM [dbo].[SurveyQuestionAnswerOptions] as ao
-					Where ao.QuestionId = sq.Id
-					FOR JSON AUTO)
+			      ,ao.[QuestionId]
+		              ,ao.[Text]
+			      FROM [dbo].[SurveyQuestionAnswerOptions] as ao
+			      Where ao.QuestionId = sq.Id
+			      FOR JSON AUTO)
 			  FROM [dbo].[SurveyQuestions] as sq
 			  WHERE sq.SurveyId = su.Id
 			  FOR JSON AUTO)
 		
       ,su.DateModified
-	  ,COUNT(1) OVER() as TotalCount
+      ,COUNT(1) OVER() as TotalCount
   FROM [dbo].[Surveys] as su
   INNER JOIN dbo.SurveyQuestions as sq
   on sq.SurveyId = su.Id
@@ -48,11 +48,11 @@ SELECT su.Id
 		   ,su.[Description]
 		   ,su.StatusId
 		   ,su.SurveyTypeId
-			,u.Email
-			,u.FirstName
-			,u.LastName
-			,u.Id
-			,u.AvatarUrl
+		   ,u.Email
+		   ,u.FirstName
+		   ,u.LastName
+		   ,u.Id
+		   ,u.AvatarUrl
 		   ,su.DateModified 
 
   ORDER BY su.Id
