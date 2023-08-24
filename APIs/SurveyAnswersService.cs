@@ -1,4 +1,3 @@
-
     public class SurveyAnswersService : ISurveyAnswersService
     {
         private IDataProvider _data = null;
@@ -300,5 +299,3 @@
         }
 
     }
-
-}
