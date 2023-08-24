@@ -1,4 +1,3 @@
-{
     public interface ISurveyAnswersService
     {
         int AddSurveyAnswer(SurveyAnswerAddRequest model, int userId);
@@ -10,4 +9,3 @@
         Paged<SurveyAnswers> SurveyAnswersCreatedBy(int pageIndex, int pageSize, int userId);
         void UpdateSurveyAnswers(ServeyAnswerUpdateRequest model, int userId);
     }
-}
