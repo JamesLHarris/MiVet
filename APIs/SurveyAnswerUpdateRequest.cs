@@ -1,4 +1,4 @@
-    public class ServeyAnswerUpdateRequest : SurveyAnswerAddRequest
+    public class SurveyAnswerUpdateRequest : SurveyAnswerAddRequest
     {
         [Required]
         [Range(1, int.MaxValue)]
